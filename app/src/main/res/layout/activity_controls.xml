@@ -4,15 +4,281 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
     tools:context="com.example.lytlech19.carstereo.Controls">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="600dp"
+        android:layout_height="320dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="-2dp"
+        tools:layout_editor_absoluteY="3dp"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            tools:layout_editor_absoluteX="-2dp"
+            tools:layout_editor_absoluteY="-2dp"
+            android:layout_weight="1.04">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <ToggleButton
+                    android:id="@+id/Power"
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:layout_weight="0.28"
+                    android:checked="false"
+                    android:text="ToggleButton"
+                    android:textOff="On"
+                    android:textOn="Off"
+                    android:textSize="8sp" />
+
+                <ToggleButton
+                    android:id="@+id/AM_FM"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_weight="0.10"
+                    android:text="ToggleButton"
+                    android:textOff="AM"
+                    android:textOn="FM"
+                    android:textSize="8sp" />
+
+                <ToggleButton
+                    android:id="@+id/Bluetooth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="31dp"
+                    android:layout_weight="0.09"
+                    android:text="ToggleButton"
+                    android:textOff="Bluetooth"
+                    android:textOn="Off"
+                    android:textSize="8sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="173dp"
+                android:layout_height="84dp"
+                android:layout_weight="1.35"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/Display"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Pilots Till I die " />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/Button1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="1"
+                        android:textColor="@android:color/black"
+                        android:textSize="8sp" />
+
+                    <Button
+                        android:id="@+id/Button2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="2"
+                        android:textColor="@android:color/black"
+                        android:textSize="8sp" />
+
+                    <Button
+                        android:id="@+id/Button3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="3"
+                        android:textColor="@android:color/black"
+                        android:textSize="8sp" />
+
+                    <Button
+                        android:id="@+id/button4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="4"
+                        android:textColor="@android:color/black"
+                        android:textSize="8sp" />
+
+                    <Button
+                        android:id="@+id/Button5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="5"
+                        android:textColor="@android:color/black"
+                        android:textSize="8sp" />
+
+                    <Button
+                        android:id="@+id/Button6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="6"
+                        android:textColor="@android:color/black"
+                        android:textSize="8sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="284dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="61dp"
+                    android:layout_height="117dp"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <EditText
+                        android:id="@+id/editText4"
+                        android:layout_width="match_parent"
+                        android:layout_height="58dp"
+                        android:ems="10"
+                        android:fontFamily="cursive"
+                        android:inputType="textPersonName"
+                        android:text="Master Volume"
+                        android:textSize="8sp" />
+
+                    <EditText
+                        android:id="@+id/editText3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:ems="10"
+                        android:fontFamily="cursive"
+                        android:inputType="textPersonName"
+                        android:text="Bass"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="115dp"
+                    android:orientation="vertical">
+
+                    <SeekBar
+                        android:id="@+id/MasterVolume"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <SeekBar
+                        android:id="@+id/Base"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="159dp">
+
+            <LinearLayout
+                android:layout_width="593dp"
+                android:layout_height="144dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/button8"
+                        android:layout_width="276dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="RE"
+                        android:textSize="8sp" />
+
+                    <Button
+                        android:id="@+id/button12"
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Play"
+                        android:textSize="8sp" />
+
+                    <Button
+                        android:id="@+id/button14"
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Pause"
+                        android:textSize="8sp" />
+
+                    <Button
+                        android:id="@+id/button9"
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Stop"
+                        android:textSize="8sp" />
+
+                    <Button
+                        android:id="@+id/button13"
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="FF"
+                        android:textSize="8sp" />
+
+                    <Button
+                        android:id="@+id/button11"
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="REP"
+                        android:textSize="8sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/CD"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.96"
+                        android:background="@android:color/black"
+                        android:fontFamily="sans-serif"
+                        android:text="CD"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
