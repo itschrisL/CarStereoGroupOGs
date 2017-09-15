@@ -18,11 +18,11 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_weight="1.04"
             android:orientation="horizontal"
             android:weightSum="1"
             tools:layout_editor_absoluteX="-2dp"
-            tools:layout_editor_absoluteY="-2dp"
-            android:layout_weight="1.04">
+            tools:layout_editor_absoluteY="-2dp">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -36,20 +36,44 @@
                     android:layout_height="22dp"
                     android:layout_weight="0.28"
                     android:checked="false"
+                    android:onClick="powerClick"
                     android:text="ToggleButton"
                     android:textOff="On"
                     android:textOn="Off"
                     android:textSize="8sp" />
 
                 <ToggleButton
-                    android:id="@+id/AM_FM"
+                    android:id="@+id/AmFm"
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
                     android:layout_weight="0.10"
+                    android:onClick="radioSwitch"
                     android:text="ToggleButton"
                     android:textOff="AM"
                     android:textOn="FM"
                     android:textSize="8sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/MinusRadio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="-"
+                        android:onClick="changeStation"/>
+
+                    <Button
+                        android:id="@+id/PlusRadio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="+"
+                        android:onClick="changeStation"/>
+                </LinearLayout>
 
                 <ToggleButton
                     android:id="@+id/Bluetooth"
@@ -69,13 +93,12 @@
                 android:layout_weight="1.35"
                 android:orientation="vertical">
 
-                <EditText
+                <TextView
                     android:id="@+id/Display"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:inputType="textPersonName"
-                    android:text="Pilots Till I die " />
+                    android:text="" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -89,7 +112,8 @@
                         android:layout_weight="1"
                         android:text="1"
                         android:textColor="@android:color/black"
-                        android:textSize="8sp" />
+                        android:textSize="8sp"
+                        android:onClick="buttonStations"/>
 
                     <Button
                         android:id="@+id/Button2"
@@ -98,7 +122,8 @@
                         android:layout_weight="1"
                         android:text="2"
                         android:textColor="@android:color/black"
-                        android:textSize="8sp" />
+                        android:textSize="8sp"
+                        android:onClick="buttonStations"/>
 
                     <Button
                         android:id="@+id/Button3"
@@ -107,16 +132,18 @@
                         android:layout_weight="1"
                         android:text="3"
                         android:textColor="@android:color/black"
-                        android:textSize="8sp" />
+                        android:textSize="8sp"
+                        android:onClick="buttonStations"/>
 
                     <Button
-                        android:id="@+id/button4"
+                        android:id="@+id/Button4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="4"
                         android:textColor="@android:color/black"
-                        android:textSize="8sp" />
+                        android:textSize="8sp"
+                        android:onClick="buttonStations"/>
 
                     <Button
                         android:id="@+id/Button5"
@@ -125,7 +152,8 @@
                         android:layout_weight="1"
                         android:text="5"
                         android:textColor="@android:color/black"
-                        android:textSize="8sp" />
+                        android:textSize="8sp"
+                        android:onClick="buttonStations"/>
 
                     <Button
                         android:id="@+id/Button6"
@@ -134,7 +162,8 @@
                         android:layout_weight="1"
                         android:text="6"
                         android:textColor="@android:color/black"
-                        android:textSize="8sp" />
+                        android:textSize="8sp"
+                        android:onClick="buttonStations"/>
                 </LinearLayout>
             </LinearLayout>
 
