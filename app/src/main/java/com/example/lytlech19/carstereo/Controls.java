@@ -161,6 +161,37 @@ public class Controls extends AppCompatActivity {
         else {
             display.setText("FM : " + stationListFm[newAMval]);
         }
+
+    }
+
+    public void onLongClick(View station){
+        int newAMval = 0;
+        if (station.equals(button1)){
+            newAMval = 0;
+        }
+        else if(station.equals(button2)){
+            newAMval = 1;
+        }
+        else if(station.equals(button3)){
+            newAMval = 2;
+        }
+        else if(station.equals(button4)){
+            newAMval = 3;
+        }
+        else if(station.equals(button5)){
+            newAMval = 4;
+        }
+        else if(station.equals(button6)){
+            newAMval = 5;
+        }
+
+        if (FMAM.isChecked()){
+            display.setText("AM : " + stationListAM[newAMval]);
+        }
+        else {
+            display.setText("FM : " + stationListFm[newAMval]);
+        }
+
     }
 
 
